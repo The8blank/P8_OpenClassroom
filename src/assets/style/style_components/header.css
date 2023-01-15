@@ -1,0 +1,56 @@
+header{
+  padding: 6vh 7vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  gap: 3vw;
+
+  display: inline-block;
+
+  list-style: none;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+
+  
+
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(12px + 1vw);
+  line-height: 142.6%;
+  white-space: nowrap;
+
+  color: #ff6060;
+}
+
+.header-links a.active {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 550px) {
+  /* .header-links {
+    gap: 10px;
+  } */
+
+  .header-logo {
+    width: 145px;
+    min-width: 50px;
+  }
+}
+
+
