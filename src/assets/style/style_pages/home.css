@@ -1,0 +1,20 @@
+.home-container{ 
+    padding: 0vw 7vw;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+
+}
+
+
+@media screen and (max-width:768px) {
+  .home-text-img{
+    white-space: normal;
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width:400px) {
+  .home-text-img{
+  }
+}

@@ -1,11 +1,10 @@
 import React from "react";
 import Card from "../components/Card";
 
-
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="home-container-img">
+      {/* <div className="home-container-img">
         <h2 className="home-text-img">Chez vous, partout et ailleurs</h2>
         <img
           className="home-img"
@@ -14,8 +13,13 @@ const Home = () => {
         />
       </div>
       <div className="home-card-container">
+      </div> */}
+      <div class="banner">
+        <div class="banner-content">
+          <h1>Chez vous, partout et ailleurs</h1>
+        </div>
       </div>
-      <Card/>
+      <Card />
     </div>
   );
 };

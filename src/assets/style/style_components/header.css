@@ -1,5 +1,6 @@
 header{
-  padding: 6vh 7vw;
+  padding: 5vh 7vw 0 7vw;
+  width: 100%;
 }
 
 nav {
@@ -8,33 +9,30 @@ nav {
   align-items: center;
 }
 
+.header-logo{
+  width: 20vw;
+  max-width: 250px;
+}
+
 .header-links {
   display: flex;
   gap: 3vw;
-
-  display: inline-block;
-
-  list-style: none;
 }
 
-.header-links {
+.header-link {
   display: flex;
+  justify-content: center;
   align-items: center;
-
-  
-
-  margin-left: 50px;
 }
 
-a {
+header a {
   text-decoration: none;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: calc(12px + 1vw);
+  font-size: 20px;
   line-height: 142.6%;
   white-space: nowrap;
-
   color: #ff6060;
 }
 
@@ -42,15 +40,12 @@ a {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 550px) {
-  /* .header-links {
-    gap: 10px;
-  } */
-
-  .header-logo {
-    width: 145px;
-    min-width: 50px;
+@media (max-width: 768px) {
+  header a {
+    font-size: 2.5vw;
   }
 }
+
+
 
 

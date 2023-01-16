@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom"
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Page404 from "./pages/Page404";
@@ -8,13 +8,37 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <>
-    <Header/>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/about" element={<About/>}/>
-      <Route path="*" element={<Page404/>}/>
-    </Routes>
-    <Footer/>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Header />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <Header />
+              <Page404 />
+            </>
+          }
+        />
+      </Routes>
     </>
   );
 }
