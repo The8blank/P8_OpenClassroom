@@ -42,6 +42,8 @@
   position: absolute;
   z-index: 1;
 
+  max-width: 250px;
+
   bottom: 1.25vh;
   left: 1vh;
 
@@ -54,8 +56,12 @@
   color: #FFFFFF;
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:768px) {
     .card-container{
         min-width: 80vw;
+    }
+
+    .card {
+      height: 255px;
     }
 }
