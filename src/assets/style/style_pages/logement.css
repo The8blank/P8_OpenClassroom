@@ -1,0 +1,27 @@
+.info-logement-top{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 5vw;
+}
+
+.logement-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+
+    color: #FF6060;
+}
+
+.logement-location {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+
+    color: #FF6060;
+
+}
