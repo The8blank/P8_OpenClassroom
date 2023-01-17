@@ -1,19 +1,22 @@
+import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Page404 from "./pages/Page404";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Logement from "./pages/Logement";
 
 function App() {
   return (
     <>
+      <Header />
+
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <Header />
               <Home />
               <Footer />
             </>
@@ -23,8 +26,16 @@ function App() {
           path="/about"
           element={
             <>
-              <Header />
               <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/logement/:id"
+          element={
+            <>
+              <Logement />
               <Footer />
             </>
           }
@@ -33,7 +44,6 @@ function App() {
           path="*"
           element={
             <>
-              <Header />
               <Page404 />
             </>
           }
