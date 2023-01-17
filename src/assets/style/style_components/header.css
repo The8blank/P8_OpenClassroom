@@ -10,11 +10,11 @@ nav {
 }
 
 .header-logo{
-  width: 20vw;
-  max-width: 250px;
+  max-width: 40vw;
 }
 
 .header-links {
+  max-width: 50vw;
   display: flex;
   gap: 3vw;
 }
@@ -42,7 +42,7 @@ header a {
 
 @media (max-width: 768px) {
   header a {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 }
 

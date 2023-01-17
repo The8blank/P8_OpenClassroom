@@ -11,6 +11,7 @@
 @import url(./style_components/banner.css);
 @import url(./style_components/card.css);
 @import url(./style_components/footer.css);
+@import url(./style_components/collapse.css);
 
 /* Style général */
 
@@ -20,7 +21,8 @@
     gap: 50px;
 
     min-height: 100vh;
-    max-width: 100vw;
+
+    box-sizing: border-box;
 }
 
 

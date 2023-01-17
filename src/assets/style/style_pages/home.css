@@ -1,9 +1,10 @@
-.home-container{ 
+.display-container{ 
     padding: 0vw 7vw;
 
     display: flex;
     flex-direction: column;
-    gap: 3vw;
+    align-items: center;
+    gap: 2.5vw;
 
 }
 
@@ -12,9 +13,5 @@
   .home-text-img{
     white-space: normal;
     font-size: 4vw;
-  }
-}
-@media screen and (max-width:400px) {
-  .home-text-img{
   }
 }
