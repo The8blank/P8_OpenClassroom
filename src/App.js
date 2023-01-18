@@ -36,7 +36,7 @@ function App() {
           element={
             <>
               <Logement />
-              <Footer />
+              {/* FOOTER DANS Logement.js */}
             </>
           }
         />

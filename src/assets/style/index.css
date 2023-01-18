@@ -16,14 +16,18 @@
 
 /* Style général */
 
+
 #root {
     display: flex;
     flex-direction: column;
     gap: 50px;
 
     min-height: 100vh;
+    overflow: hidden;
 
     box-sizing: border-box;
+
+    
 }
 
 

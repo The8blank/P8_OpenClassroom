@@ -1,27 +1,82 @@
-.info-logement-top{
+.info-habitat {
+  padding: 30px 8vw;
+  width: 100%;
+}
+
+.info-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.host-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 142.6%;
+  /* or 51px */
+  display: flex;
+  align-items: flex-end;
+
+  color: #ff6060;
+}
+
+.host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.host-name {
+  width: 90px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+
+  color: #ff6060;
+}
+
+.host-pic {
+  width: 64px;
+  height: 64px;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 50%;
+}
+
+.info-loc {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+
+  display: flex;
+  align-items: flex-end;
+
+  color: #ff6060;
+}
+
+.tags-stars {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 1vh;
+}
+
+.tag-container {
     display: flex;
-    justify-content: space-between;
-
-    padding: 0 5vw;
+    gap: 10px;
 }
 
-.logement-title {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 142.6%;
 
-    color: #FF6060;
-}
-
-.logement-location {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 142.6%;
-
-    color: #FF6060;
-
-}
