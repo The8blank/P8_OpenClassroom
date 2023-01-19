@@ -2,6 +2,10 @@
   width: 70vw;
 }
 
+.collapse-medium {
+  width: 100%;
+}
+
 .collapse-bar {
   width: 100%;
   padding: 10px 15px;

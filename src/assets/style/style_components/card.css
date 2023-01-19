@@ -4,6 +4,9 @@
   flex-wrap: wrap;
   gap: 2.5vw;
   width: 100%;
+  background: #F7F7F7;
+  padding: 50px;
+  border-radius: 1vw;
 }
 
 .card {

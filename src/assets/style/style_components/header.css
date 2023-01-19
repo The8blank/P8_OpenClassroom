@@ -43,6 +43,7 @@ header a {
 @media (max-width: 768px) {
   header a {
     font-size: 3vw;
+    text-transform: uppercase;
   }
 }
 

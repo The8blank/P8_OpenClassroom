@@ -2,6 +2,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import data from "../database/data";
 import Footer from "../components/Footer";
+import Tag from "../components/Tag";
+import StarRating from "../components/StarRating";
+import Collapse from "../components/Collapse";
+import Slider from "../components/Slider";
 
 const Logement = () => {
   const { id } = useParams();
@@ -10,43 +14,62 @@ const Logement = () => {
 
   useEffect(() => {
     if (!card) {
-      navigate("/404");
+      navigate('/404')
     }
-  }, [card, navigate]);
+  }, [card, navigate, id]);
 
   if (card) {
+    const dropdownData = [
+      {
+        id: "1",
+        title: "Description",
+        content: card.description,
+      },
+      {
+        id: "2",
+        title: "Équipments",
+        content: card.equipments.join(", "),
+      },
+    ];
+    
     return (
       <>
-        <div className="slider">SLIDER</div>
+        <div className="logement-display">
+          <Slider slides={card.pictures} />
 
-        <div className="info-habitat">
-          <div className="info-top">
-            <h2 className="host-title">{card.title}</h2>
+          <div className="info-habitat">
+            <div className="info-top">
+              <h2 className="host-title">{card.title}</h2>
+              <h3 className="info-loc">{card.location}</h3>
+              <div className="tag-container">
+                {card.tags.map((item) => (
+                  <Tag dataTag={item} key={item} />
+                ))}
+              </div>
+            </div>
+
             <div className="host-info">
-              <p className="host-name">{card.host.name}</p>
-              <img
-                className="host-pic"
-                src={card.host.picture}
-                alt="Photo du propriétaire"
-              />
+              <div className="host">
+                <p className="host-name">{card.host.name}</p>
+                <img
+                  className="host-pic"
+                  src={card.host.picture}
+                  alt="Le propriétaire"
+                />
+              </div>
+              <div className="rating-stars">
+                <StarRating stars={card.rating} />
+              </div>
             </div>
           </div>
-          <h3 className="info-loc">{card.location}</h3>
-          <div className="tags-stars">
-            <div className="tag-container">
-              {card.tags.map((item) => (
-                <div>tag</div>
-              ))}
-            </div>
-            <div className="stars-container">
-              {
-                card.rating
-              }
-            </div>
+
+          <div className="dropdown-container">
+            {dropdownData.map((item) => (
+              <Collapse data={item} size={"collapse-medium"} key={item.id} />
+            ))}
           </div>
         </div>
-
-        <Footer/>
+        <Footer />
       </>
     );
   }

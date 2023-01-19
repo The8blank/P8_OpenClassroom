@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import arrowUp from "./img/arrow_up.png";
+import arrowDown from "./img/arrow_down.png";
 
 function Collapse  (props)  {
 
@@ -14,7 +16,7 @@ function Collapse  (props)  {
       <div className="collapse-bar" onClick={toggleCollapse}>
         <h2>{data.title}</h2>
         <img
-          src={isOpen ? "/arrow_up.png" : "./arrow_down.png"}
+          src={isOpen ? arrowUp : arrowDown}
           className="collapse-arrow"
           alt={isOpen ? "flèche pointant le haut" : "flèche pointant le bas"}
         />

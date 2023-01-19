@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  max-height: 100vh;
+  overflow: hidden;
+
+  margin: 50px;
 }
 
 .error-container h1 {
@@ -35,8 +40,7 @@
 }
 
 .error-container a {
-  margin-top: 150px;
-
+  margin-top: 50px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -49,7 +53,7 @@
   color: #ff6060;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .error-container h1 {
     font-size: 30vw;
   }
@@ -59,8 +63,6 @@
   }
 
   .error-container a {
-    margin-top: 5vh;
-
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 500;
@@ -69,6 +71,7 @@
 
     display: flex;
     align-items: flex-end;
+    text-align: center;
 
     color: #ff6060;
   }

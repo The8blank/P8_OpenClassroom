@@ -10,6 +10,7 @@
 @import url(./style_components/header.css);
 @import url(./style_components/banner.css);
 @import url(./style_components/card.css);
+@import url(./style_components/tag.css);
 @import url(./style_components/footer.css);
 @import url(./style_components/collapse.css);
 @import url(./style_pages/logement.css);
@@ -20,14 +21,11 @@
 #root {
     display: flex;
     flex-direction: column;
-    gap: 50px;
 
     min-height: 100vh;
     overflow: hidden;
 
     box-sizing: border-box;
-
-    
 }
 
 
