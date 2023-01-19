@@ -72,15 +72,26 @@ const Slider = ({ slides }) => {
   return (
     <div style={containerStyle}>
       <div style={sliderStyle}>
-        <img
-          style={leftArrowStyle}
-          src={leftArrow}
-          onClick={goToPrevious}
-          alt="flèche de gauche"
-        ></img>
-        <img style={rightArrowStyle} src={rightArrow} onClick={goToNext} alt="flèche de droite"></img>
+        {slides.length === 1 ? (
+          ""
+        ) : (
+          <>
+            <img
+              style={leftArrowStyle}
+              src={leftArrow}
+              onClick={goToPrevious}
+              alt="flèche de gauche"
+            ></img>
+            <img
+              style={rightArrowStyle}
+              src={rightArrow}
+              onClick={goToNext}
+              alt="flèche de droite"
+            ></img>
+          </>
+        )}
         <div className="slide-index" style={slideIndexStyle}>
-          {currentIndex}/{slides.length}
+          {currentIndex + 1}/{slides.length}
         </div>
         <div style={slideStyles}></div>
       </div>
