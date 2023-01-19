@@ -1,6 +1,6 @@
 import React from "react";
-import grayStar from "./img/gray_star.png";
-import redStar from "./img/red_star.png";
+import grayStar from "../assets/images/gray_star.png";
+import redStar from "../assets/images/red_star.png";
 
 const StarRating = (props) => {
   const { stars } = props;
