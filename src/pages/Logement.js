@@ -8,17 +8,23 @@ import Collapse from "../components/Collapse";
 import Slider from "../components/Slider";
 
 const Logement = () => {
+  //On récupère l'id de l'objet "logement" à afficher dans l'url
   const { id } = useParams();
+  //On utilise l'id pour chercher l'objet "logement" correspondant dans notre base de données
   const card = data.find((item) => item.id === id);
+  //On récupère la fonction "navigate" de react-router pour rediriger l'utilisateur sur la page 404 en cas d'erreur
   const navigate = useNavigate();
 
+  //On vérifie que "card" existe, sinon, on redirige l'utilisateur sur la page 404
   useEffect(() => {
     if (!card) {
       navigate('/404')
     }
   }, [card, navigate, id]);
 
+  // Si "card" existe, on affiche les données
   if (card) {
+    //On prépare les données pour le composant "Collapse"
     const dropdownData = [
       {
         id: "1",
@@ -42,6 +48,7 @@ const Logement = () => {
               <h2 className="host-title">{card.title}</h2>
               <h3 className="info-loc">{card.location}</h3>
               <div className="tag-container">
+                {/* On utilise ce composant pour afficher les tags */}
                 {card.tags.map((item) => (
                   <Tag dataTag={item} key={item} />
                 ))}
@@ -58,17 +65,20 @@ const Logement = () => {
                 />
               </div>
               <div className="rating-stars">
+                {/* On utilise ce composant pour afficher les étoiles de notation */}
                 <StarRating stars={card.rating} />
               </div>
             </div>
           </div>
 
           <div className="dropdown-container">
+            {/* On utilise ce composant pour afficher la description et les équipements */}
             {dropdownData.map((item) => (
               <Collapse data={item} size={"collapse-medium"} key={item.id} />
             ))}
           </div>
         </div>
+        {/* On utilise ce composant pour afficher le footer */}
         <Footer />
       </>
     );

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Logo from "../assets/images/logo.png";
 
 const Header = () => {
+  // Ce composant renvoie un header avec un logo et des liens de navigation
   return (
     <header>
       <nav>

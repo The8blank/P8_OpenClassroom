@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Composant affichant une page d'erreur 404
 const Page404 = () => {
     return (
         <div className='error-container'>

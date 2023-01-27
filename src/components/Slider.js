@@ -3,8 +3,10 @@ import leftArrow from "../assets/images/leftArrow.png";
 import rightArrow from "../assets/images/rightArrow.png";
 
 const Slider = ({ slides }) => {
+  // utilisation de useState pour stocker l'index courant de la slide
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // styles pour le conteneur, le slider, les flèches et le compteur de slide
   const containerStyle = {
     width: "100%",
     height: "33.33vh",
@@ -58,11 +60,22 @@ const Slider = ({ slides }) => {
     color: "#FFFFFF",
   };
 
+  /* La fonction "goToPrevious" permet de passer à la diapositive précédente lorsque 
+  l'utilisateur clique sur la flèche de gauche. 
+  Elle vérifie si l'on est déjà sur la première diapositive, 
+  et si c'est le cas, elle revient à la dernière diapositive. 
+  Sinon, elle passe à la diapositive précédente. */
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
+  /* La fonction "goToNext" permet de passer à la diapositive suivante lorsque
+   l'utilisateur clique sur la flèche de droite. 
+   Elle vérifie si l'on est déjà sur la dernière diapositive, 
+   et si c'est le cas, elle revient à la première diapositive. 
+   Sinon, elle passe à la diapositive suivante. */
   const goToNext = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;

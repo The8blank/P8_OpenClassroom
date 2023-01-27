@@ -3,8 +3,10 @@ import Collapse from "../components/Collapse";
 import aboutData from "../database/about_data";
 
 const About = () => {
+  // utilisation d'un useState pour stocker la data provenant du fichier about_data.js
   const [dataCollapse, setDataCollapse] = useState([]);
 
+  //stockage de la data dans la variable à chaque affichage de la page
   useEffect(() => {
     setDataCollapse(aboutData)
   }, [])

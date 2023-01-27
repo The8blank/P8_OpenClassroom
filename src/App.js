@@ -7,11 +7,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Logement from "./pages/Logement";
 
+// Composant principal de l'application qui gère la navigation et les routes
 function App() {
   return (
     <>
+      {/* En-tête commune à toutes les pages */}
       <Header />
 
+      {/* Routes de l'application */}
       <Routes>
         <Route
           path="/"
